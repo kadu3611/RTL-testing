@@ -1,9 +1,8 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import renderWithRouter from '../components/renderWithRouter';
 import App from '../App';
-import About from '../components/About';
 
 describe('Requisito 1', () => {
   it('O primeiro link deve possuir o texto Home.'
