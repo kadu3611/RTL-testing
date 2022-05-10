@@ -1,7 +1,7 @@
 import React from 'react';
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import renderWithRouter from '../renderWithRouter';
+import renderWithRouter from '../helpers/renderWithRouter';
 import FavoritePokemons from '../components/FavoritePokemons';
 import App from '../App';
 
@@ -25,15 +25,9 @@ describe('Requisito ', () => {
     // Summary
     const sumary = screen.getByRole('heading', { name: /Summary/i });
     expect(sumary).toBeInTheDocument();
-
-    // const marcarCheck = screen.getByText(/Pokémon favoritado?/i);
-    // userEvent.click(marcarCheck);
     const favoritarPokemon = screen.getByText(/Pokémon favoritado?/i);
     userEvent.click(favoritarPokemon);
     const check = screen.getByRole('checkbox', { checked: true });
-    // const srcImage = /star-icon.svg/i;
-    // const testChecked = screen.getByRole('img');
-    // expect(testChecked.src).toBe(srcImage);
     expect(check).toBeInTheDocument();
     // Agora ir para à página favorito e verificar se chamander está lá
     const favoritesLink = screen.getByRole('link', {
