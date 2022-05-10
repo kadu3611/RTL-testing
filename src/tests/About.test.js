@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { screen } from '@testing-library/react';
-import renderWithRouter from '../components/renderWithRouter';
+import renderWithRouter from '../helpers/renderWithRouter';
 import { About } from '../components';
 
 describe('Requisito ', () => {

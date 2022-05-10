@@ -1,7 +1,7 @@
 // Page requested not found 😭
 import React from 'react';
 import { screen } from '@testing-library/react';
-import renderWithRouter from '../components/renderWithRouter';
+import renderWithRouter from '../helpers/renderWithRouter';
 import { NotFound } from '../components';
 
 describe('Requisito 4', () => {

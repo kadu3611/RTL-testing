@@ -3,7 +3,7 @@
 import React from 'react';
 import { screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import renderWithRouter from '../renderWithRouter';
+import renderWithRouter from '../helpers/renderWithRouter';
 import App from '../App';
 
 describe('Requisito 6 ', () => {
@@ -79,12 +79,6 @@ describe('Requisito 6 ', () => {
     const name = aboutTitle.innerHTML;
     const nameChamander = screen.getByRole('img',
       { name: `${name} is marked as favorite` });
-      console.log(name);
     expect(nameChamander).toBeInTheDocument();
-  //   expect(moreTitle.src).toBet();
-    /// star-icon.svg
   });
 });
-
-// <pokemon> is marked as favorite
-// pokemon-name
